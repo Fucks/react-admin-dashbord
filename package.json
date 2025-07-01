@@ -2,12 +2,14 @@
   "name": "app",
   "version": "1.0.0",
   "description": "This project is a frontend application built with React to provide a user interface for visualizing and editing information within an Apache APISIX instance. It aims to simplify the management of APISIX resources like Routes, Services, Upstreams, and Consumers by offering an intuitive and interactive dashboard.",
-  "main": "index.js",
-  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
